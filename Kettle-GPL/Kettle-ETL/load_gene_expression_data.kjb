@@ -96,6 +96,11 @@
             <default_value/>
             <description/>
         </parameter>
+		<parameter>
+             <name>FACT_SET</name>
+             <default_value>DEFAULT</default_value>
+             <description>Required, The name that gets put into Observation Fact. This will be used to partition the data for easy loading/reloading.</description>
+         </parameter>      
     </parameters>
   <connection>
     <name>BIOMART</name>
