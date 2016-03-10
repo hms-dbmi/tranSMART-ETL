@@ -45,7 +45,7 @@ export KETTLE_HOME=$ENVIRONMENT
 ## Load Study's Mapped data and GRDR Concepts
 if [ $LOAD_REGISTRY == 'Y' ];
         then
-        ./ScriptRepo/create_clinical_data.sh ${MAPPING_FILE} ${STUDY_ID} "'"${SORT_DIR}"'" ${FACT_SET} ${DATA_LOCATION} ${RAW_DATA} ${LOGFILE} ${DEBUG} ${LOAD_TYPE} "${TOP_NODE}" >> "${LOGFILE}" 2>>"${LOGFILE}_ERROR.log"
+        /tranSMART-ETL/Kettle-GPL/ETL/Loading/ScriptRepo/create_clinical_data.sh ${MAPPING_FILE} ${STUDY_ID} "'"${SORT_DIR}"'" ${FACT_SET} ${DATA_LOCATION} ${RAW_DATA} ${LOGFILE} ${DEBUG} ${LOAD_TYPE} "${TOP_NODE}" >> "${LOGFILE}" 2>>"${LOGFILE}_ERROR.log"
 fi
 
  MAPPING_FILE=$RAW_MAPPING
@@ -53,7 +53,7 @@ fi
 ## Load Study's Raw Data
 if [ $LOAD_RAW == 'Y' ];
         then
-        ./ScriptRepo/create_clinical_data.sh ${MAPPING_FILE} ${STUDY_ID} "'"${SORT_DIR}"'" ${FACT_SET} ${DATA_LOCATION} ${RAW_DATA} ${LOGFILE} ${DEBUG} ${LOAD_TYPE} "${TOP_NODE}/__RAW" >> "${LOGFILE}" 2>>"${LOGFILE}_ERROR.log"
+        /tranSMART-ETL/Kettle-GPL/ETL/Loading/ScriptRepo/create_clinical_data.sh ${MAPPING_FILE} ${STUDY_ID} "'"${SORT_DIR}"'" ${FACT_SET} ${DATA_LOCATION} ${RAW_DATA} ${LOGFILE} ${DEBUG} ${LOAD_TYPE} "${TOP_NODE}/__RAW" >> "${LOGFILE}" 2>>"${LOGFILE}_ERROR.log"
 fi
 
      
