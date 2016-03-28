@@ -13,7 +13,7 @@
 # database. This should be changed as soon as time permits. As long as this is not done,
 # use the root user and the root password.
 
-sqlplus root/UNk3Sae2xpXSsn7s@grdr-dev-db.dbmi.hms.harvard.edu:1521/ORCL << EOF
+sqlplus <username>/<password>@server:<port>/<instance> << EOF
 
 set serveroutput on format wrapped;
 begin
